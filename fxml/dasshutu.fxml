@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <ImageView fitHeight="424.0" fitWidth="376.0">
+      <image>
+        <Image url="@../png/goal.png" />
+      </image>
+    </ImageView>
+    <Label graphicTextGap="10.0" layoutX="45.0" layoutY="438.0" prefHeight="66.0" prefWidth="242.0" text="Score: ">
+      <font>
+        <Font size="37.0" />
+      </font>
+    </Label>
+  </children>
+</Pane>

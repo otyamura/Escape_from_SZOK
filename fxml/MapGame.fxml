@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox onKeyPressed="#keyAction" prefHeight="807.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapGameController">
+  <padding>
+    <Insets bottom="10" left="10" right="10" top="10" />
+  </padding>
+
+  <children>
+      <Pane prefHeight="159.0" prefWidth="710.0">
+      <children>
+        <Button layoutX="596.0" layoutY="15.0" onAction="#func1ButtonAction" prefWidth="100" text="初めから" />
+        <Button layoutX="596.0" layoutY="47.0" onAction="#func5ButtonAction" prefHeight="68.0" prefWidth="100.0" text="攻撃" />
+          <Label layoutX="112.0" layoutY="51.0">
+            <font>
+              <Font size="15.0" />
+            </font>
+          </Label>
+
+          <Label fx:id="item" layoutX="140.0" layoutY="52.0" text="item">
+            <font>
+              <Font size="24.0" />
+            </font>
+          </Label>
+
+          <Label layoutX="104.0" layoutY="74.0">
+            <font>
+              <Font size="15.0" />
+            </font>
+          </Label>
+
+          <Label fx:id="time" layoutX="424.0" layoutY="45.0" prefHeight="55.0" prefWidth="71.0" text="00:00" textAlignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+          </Label>
+
+          <Label fx:id="playerhp" layoutX="140.0" layoutY="10.0" text="HP">
+            <font>
+              <Font size="24.0" />
+            </font>
+          </Label>
+
+          <Label fx:id="playerscore" layoutX="137.0" layoutY="93.0" text="SCORE">
+            <font>
+              <Font size="24.0" />
+            </font>
+          </Label>
+
+          <Label fx:id="labelStage" layoutX="425.0" layoutY="10.0" text="STAGE">
+            <font>
+              <Font size="24.0" />
+            </font>
+          </Label>
+
+          <ImageView fitHeight="117.0" fitWidth="131.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+              <Image url="@../png/monkey.png" />
+            </image>
+          </ImageView>
+        </children>
+      </Pane>
+
+
+    <GridPane fx:id="mapGrid" onMouseClicked="#funcMouseAction" prefHeight="342.0" prefWidth="710.0">
+    </GridPane>
+      <Pane prefHeight="127.0" prefWidth="743.0">
+        <children>
+        <GridPane alignment="center" hgap="10" layoutX="14.0" layoutY="14.0" vgap="10">
+        <Button onAction="#upButtonAction" text="↑" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button onAction="#leftButtonAction" text="←" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button onAction="#rightButtonAction" text="→" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button onAction="#downButtonAction" text="↓" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+              </rowConstraints>
+          </GridPane>
+            <ImageView fx:id="enemyImage" fitHeight="117.0" fitWidth="131.0" layoutX="597.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../png/ark.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="textLabel" layoutX="149.0" layoutY="22.0" prefHeight="82.0" prefWidth="445.0" text="Label">
+              <font>
+                  <Font size="23.0" />
+              </font>
+            </Label>
+        </children>
+      </Pane>
+
+  </children>
+</VBox>

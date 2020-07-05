@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameOverController">
+  <children>
+    <ImageView fitHeight="337.0" fitWidth="596.0" layoutX="7.0" layoutY="4.0" onMouseClicked="#funcMouseAction" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../png/gameover.png"/>
+      </image>
+    </ImageView>
+  </children>
+</Pane>

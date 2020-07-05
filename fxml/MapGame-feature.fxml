@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox centerShape="false" onKeyPressed="#keyAction" prefHeight="716.0" prefWidth="687.0" scaleShape="false" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapGameController">
+  <padding>
+    <Insets bottom="10" left="10" right="10" top="10" />
+  </padding>
+
+  <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <ImageView fitHeight="99.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../png/ark.png" />
+              </image>
+            </ImageView>
+            <Pane prefHeight="99.0" prefWidth="465.0">
+              <children>
+
+
+                <Label fx:id="item" layoutX="27.0" layoutY="54.0" prefHeight="25.0" prefWidth="116.0" />
+                <Label fx:id="clearcount" layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="100.0">
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+                  </Label>
+              <Button layoutX="343.0" layoutY="8.0" onAction="#func4ButtonAction" prefWidth="100" text="荒木" />
+              <Button layoutX="323.0" layoutY="38.0" onAction="#func3ButtonAction" prefWidth="100" text="ゲームオーバー" />
+              <Button layoutX="330.0" layoutY="71.0" onAction="#func2ButtonAction" prefWidth="100" text="クリアー" />
+              </children>
+            </Pane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="95.0" prefWidth="142.0">
+              <children>
+            <Button layoutX="21.0" layoutY="37.0" onAction="#func5ButtonAction" prefHeight="58.0" prefWidth="100.0" text="攻撃" />
+
+              <Button layoutX="21.0" layoutY="3.0" onAction="#func1ButtonAction" prefWidth="100" text="最初から" />
+              </children>
+            </AnchorPane>
+        </children>
+      </HBox>
+
+
+    <GridPane fx:id="mapGrid" prefHeight="360" prefWidth="360">
+    </GridPane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+      	<GridPane alignment="center" hgap="10" layoutX="19.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="96.0" prefWidth="111.0" vgap="10">
+      	  <Button onAction="#upButtonAction" text="↑" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      	  <Button onAction="#leftButtonAction" text="←" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      	  <Button onAction="#rightButtonAction" text="→" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      	  <Button onAction="#downButtonAction" text="↓" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+      	</GridPane>
+            <GridPane layoutX="236.0" layoutY="40.0" prefHeight="100.0" prefWidth="332.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+
+                                                                <Label text="player's HP" />
+
+                                        <Label text="player's score" GridPane.rowIndex="1" />
+                <Label fx:id="playerhp" text="" GridPane.columnIndex="1" />
+                <Label fx:id="playerscore" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="time" prefHeight="55.0" prefWidth="71.0" text="00:00" textAlignment="CENTER">
+                   <font>
+                      <Font size="24.0" />
+                   </font>
+                </Label>
+
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+
+  </children>
+</VBox>
